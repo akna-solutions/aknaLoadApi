@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "2GgOzipmy/zflLmJUqhYBCpcXvPxZxaZhkmTpRfTjfZpxcHWSX9pNFPy00j2VtO4XZQAqvKionCyzBmLR35kXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\AknaLoad.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.10\\microsoft.extensions.configuration.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.10\\microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.10\\microsoft.extensions.dependencyinjection.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.10\\microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.logging\\9.0.10\\microsoft.extensions.logging.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.10\\microsoft.extensions.logging.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.options\\9.0.10\\microsoft.extensions.options.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.10\\microsoft.extensions.primitives.9.0.10.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.10\\system.diagnostics.diagnosticsource.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "XaVPUSAf7wnd5DtkOKYxhGykv0ETfhq9FTRH7yNrWw8=",
+  "Source": "AknaLoad.Api",
+  "BasePath": "_content/AknaLoad.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,15 @@
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\bin\Debug\net8.0\AknaLoad.Infrastructure.deps.json
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\bin\Debug\net8.0\AknaLoad.Infrastructure.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\bin\Debug\net8.0\AknaLoad.Infrastructure.pdb
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\bin\Debug\net8.0\AknaLoad.Domain.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\bin\Debug\net8.0\AknaLoad.Domain.pdb
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.AssemblyInfo.cs
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.535CC5A0.Up2Date
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\refint\AknaLoad.Infrastructure.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.pdb
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\ref\AknaLoad.Infrastructure.dll

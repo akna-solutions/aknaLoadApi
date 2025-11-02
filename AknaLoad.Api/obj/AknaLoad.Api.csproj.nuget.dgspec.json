@@ -1,0 +1,315 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\AknaLoad.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\AknaLoad.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\AknaLoad.Api.csproj",
+        "projectName": "AknaLoad.Api",
+        "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\AknaLoad.Api.csproj",
+        "packagesPath": "C:\\Users\\Mert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\AknaLoad.Business.csproj": {
+                "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\AknaLoad.Business.csproj"
+              },
+              "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj": {
+                "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj"
+              },
+              "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\AknaLoad.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\AknaLoad.Business.csproj",
+        "projectName": "AknaLoad.Business",
+        "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\AknaLoad.Business.csproj",
+        "packagesPath": "C:\\Users\\Mert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj": {
+                "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj",
+        "projectName": "AknaLoad.Domain",
+        "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj",
+        "packagesPath": "C:\\Users\\Mert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj",
+        "projectName": "AknaLoad.Infrastructure",
+        "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Mert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj": {
+                "projectPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\AknaLoad.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\bin\Debug\net8.0\AknaLoad.Domain.deps.json
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\bin\Debug\net8.0\AknaLoad.Domain.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\bin\Debug\net8.0\AknaLoad.Domain.pdb
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\AknaLoad.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\AknaLoad.Domain.AssemblyInfoInputs.cache
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\AknaLoad.Domain.AssemblyInfo.cs
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\AknaLoad.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\AknaLoad.Domain.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\refint\AknaLoad.Domain.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\AknaLoad.Domain.pdb
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Domain\obj\Debug\net8.0\ref\AknaLoad.Domain.dll
