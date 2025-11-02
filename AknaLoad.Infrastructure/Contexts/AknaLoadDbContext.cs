@@ -14,6 +14,7 @@ namespace AknaLoad.Infrastructure.Persistence
 
         // DbSets
         public DbSet<Load> Loads { get; set; }
+        public DbSet<LoadStop> LoadStops { get; set; }
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<PricingCalculation> PricingCalculations { get; set; }
@@ -27,6 +28,7 @@ namespace AknaLoad.Infrastructure.Persistence
 
             // Apply all configurations
             modelBuilder.ApplyConfiguration(new LoadConfiguration());
+            modelBuilder.ApplyConfiguration(new LoadStopConfiguration());
             modelBuilder.ApplyConfiguration(new DriverConfiguration());
             modelBuilder.ApplyConfiguration(new MatchConfiguration());
             modelBuilder.ApplyConfiguration(new PricingCalculationConfiguration());
@@ -36,6 +38,7 @@ namespace AknaLoad.Infrastructure.Persistence
 
             // Global query filters for soft delete
             modelBuilder.Entity<Load>().HasQueryFilter(e => !e.IsDeleted);
+            modelBuilder.Entity<LoadStop>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<Driver>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<Match>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<PricingCalculation>().HasQueryFilter(e => !e.IsDeleted);

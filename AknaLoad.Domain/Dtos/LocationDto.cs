@@ -2,6 +2,9 @@
 
 namespace AknaLoad.Domain.Dtos
 {
+    /// <summary>
+    /// DTO for location information
+    /// </summary>
     public class LocationDto
     {
         public decimal Latitude { get; set; }
@@ -29,5 +32,7 @@ namespace AknaLoad.Domain.Dtos
                 ContactPhone = ContactPhone
             };
         }
+
+
     }
 }

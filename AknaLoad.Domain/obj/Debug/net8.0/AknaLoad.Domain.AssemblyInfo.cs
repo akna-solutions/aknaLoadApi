@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AknaLoad.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a13763c426a07e6ae10e261c98760101063dd8cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c397b91e5c1c4a13f80c1b530a3ffb7938801ea5")]
 [assembly: System.Reflection.AssemblyProductAttribute("AknaLoad.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AknaLoad.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

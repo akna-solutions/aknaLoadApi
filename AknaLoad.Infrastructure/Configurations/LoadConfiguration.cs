@@ -2,12 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AknaLoad.Infrastructure.Configurations
+namespace AknaLoad.Domain.Configurations
 {
     public class LoadConfiguration : IEntityTypeConfiguration<Load>
     {
         public void Configure(EntityTypeBuilder<Load> builder)
         {
+
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
@@ -38,12 +39,22 @@ namespace AknaLoad.Infrastructure.Configurations
                 .IsRequired()
                 .HasConversion<int>();
 
-            // DateTime fields
-            builder.Property(x => x.PickupDateTime)
-                .IsRequired();
+          
+            // DateTime fields (Legacy)
+            builder.Property(x => x.PickupDateTime);
 
-            builder.Property(x => x.DeliveryDeadline)
-                .IsRequired();
+            builder.Property(x => x.DeliveryDeadline);
+
+            // New multi-stop time fields
+            builder.Property(x => x.EarliestPickupTime);
+
+            builder.Property(x => x.LatestDeliveryTime);
+
+            builder.Property(x => x.PublishedAt);
+
+            builder.Property(x => x.MatchedAt);
+
+            builder.Property(x => x.CompletedAt);
 
             // Decimal fields with precision
             builder.Property(x => x.Weight)
@@ -55,8 +66,20 @@ namespace AknaLoad.Infrastructure.Configurations
             builder.Property(x => x.FixedPrice)
                 .HasPrecision(10, 2);
 
+            // Legacy distance field
             builder.Property(x => x.DistanceKm)
                 .HasPrecision(10, 2);
+
+            // New multi-stop distance field
+            builder.Property(x => x.TotalDistanceKm)
+                .HasPrecision(10, 2);
+
+            // Duration fields
+            builder.Property(x => x.EstimatedDurationMinutes);
+
+            builder.Property(x => x.EstimatedTotalDurationMinutes);
+
+          
 
             // Contact fields
             builder.Property(x => x.ContactPersonName)
@@ -68,7 +91,7 @@ namespace AknaLoad.Infrastructure.Configurations
             builder.Property(x => x.ContactEmail)
                 .HasMaxLength(100);
 
-            // Instructions
+            // Instructions (Legacy)
             builder.Property(x => x.PickupInstructions)
                 .HasMaxLength(500);
 
@@ -90,15 +113,27 @@ namespace AknaLoad.Infrastructure.Configurations
                 .IsRequired()
                 .HasMaxLength(100);
 
+            // Navigation Properties
+            builder.HasMany(x => x.LoadStops)
+                .WithOne(ls => ls.Load)
+                .HasForeignKey(ls => ls.LoadId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             // Indexes for performance
             builder.HasIndex(x => x.OwnerId);
             builder.HasIndex(x => x.Status);
             builder.HasIndex(x => x.LoadType);
+            builder.HasIndex(x => x.IsMultiStop);
+            builder.HasIndex(x => x.RoutingStrategy);
             builder.HasIndex(x => x.PickupDateTime);
             builder.HasIndex(x => x.DeliveryDeadline);
+            builder.HasIndex(x => x.EarliestPickupTime);
+            builder.HasIndex(x => x.LatestDeliveryTime);
             builder.HasIndex(x => x.CreatedDate);
             builder.HasIndex(x => new { x.Status, x.PickupDateTime });
             builder.HasIndex(x => new { x.IsDeleted, x.Status });
+            builder.HasIndex(x => new { x.IsMultiStop, x.Status });
+            builder.HasIndex(x => new { x.EarliestPickupTime, x.LatestDeliveryTime });
         }
     }
 }
