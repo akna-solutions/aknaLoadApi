@@ -13,3 +13,4 @@ C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\refint\AknaLoad.Infrastructure.dll
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.pdb
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\ref\AknaLoad.Infrastructure.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Infrastructure\obj\Debug\net8.0\AknaLoad.Infrastructure.sourcelink.json

@@ -167,3 +167,4 @@ C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Api\bin\Debug\net8.0\Microso
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Api\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Api\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Api\obj\Debug\net8.0\AknaLoad.Api.sourcelink.json

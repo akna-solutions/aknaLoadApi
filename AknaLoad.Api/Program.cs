@@ -42,12 +42,15 @@ builder.Services.AddHttpClient<IVehicleService, VehicleService>(client =>
 builder.Services.AddScoped<IVehicleService, VehicleService>();
 
 // Controllers
+// Controllers
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         options.JsonSerializerOptions.WriteIndented = true;
         options.JsonSerializerOptions.PropertyNamingPolicy = null; // Use exact property names
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
     });
 
 // CORS

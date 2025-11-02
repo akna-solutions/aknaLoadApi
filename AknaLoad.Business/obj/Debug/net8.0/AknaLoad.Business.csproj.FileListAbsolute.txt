@@ -13,3 +13,4 @@ C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Business\obj\Debug\net8.0\Ak
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Business\obj\Debug\net8.0\refint\AknaLoad.Business.dll
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Business\obj\Debug\net8.0\AknaLoad.Business.pdb
 C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Business\obj\Debug\net8.0\ref\AknaLoad.Business.dll
+C:\Users\Mert\Desktop\big-boss\aknaLoadApi\AknaLoad.Business\obj\Debug\net8.0\AknaLoad.Business.sourcelink.json
