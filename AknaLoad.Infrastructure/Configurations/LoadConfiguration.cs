@@ -14,7 +14,7 @@ namespace AknaLoad.Domain.Configurations
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd();
 
-            builder.Property(x => x.OwnerId)
+            builder.Property(x => x.CompanyId)
                 .IsRequired();
 
             builder.Property(x => x.Title)
@@ -120,7 +120,7 @@ namespace AknaLoad.Domain.Configurations
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Indexes for performance
-            builder.HasIndex(x => x.OwnerId);
+            builder.HasIndex(x => x.CompanyId);
             builder.HasIndex(x => x.Status);
             builder.HasIndex(x => x.LoadType);
             builder.HasIndex(x => x.IsMultiStop);

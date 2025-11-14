@@ -9,7 +9,7 @@ namespace AknaLoad.Domain.Entities
     [Table("Loads")]
     public class Load : BaseEntity
     {
-        public long OwnerId { get; set; } // Identity Service reference
+        public long CompanyId { get; set; } // Identity Service reference
         public string Title { get; set; } = string.Empty;
         public string? Description { get; set; }
         public LoadStatus Status { get; set; } = LoadStatus.Draft;
