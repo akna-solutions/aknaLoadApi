@@ -31,7 +31,7 @@ namespace AknaLoad.Application.Services
             _logger = logger;
         }
 
-        public async Task<PricingResult> CalculatePriceAsync(
+        public async Task<object> CalculatePriceAsync(
             decimal distanceKm,
             decimal weight,
             decimal? volume,
@@ -111,7 +111,7 @@ namespace AknaLoad.Application.Services
             }
         }
 
-        public async Task<List<VehicleMatch>> GetVehicleMatchesAsync(
+        public async Task<object> GetVehicleMatchesAsync(
             decimal weight,
             decimal? volume,
             LoadType loadType,
@@ -180,31 +180,35 @@ namespace AknaLoad.Application.Services
 
         public async Task<PricingCalculation> SavePricingCalculationAsync(
             long loadId,
-            PricingResult pricingResult)
+            object pricingResult)
         {
             try
             {
+                // Cast object to PricingResult
+                var result = pricingResult as PricingResult
+                    ?? throw new ArgumentException("pricingResult must be of type PricingResult", nameof(pricingResult));
+
                 var calculation = new PricingCalculation
                 {
                     LoadId = loadId,
-                    AlgorithmVersion = pricingResult.AlgorithmVersion,
-                    CalculatedPrice = pricingResult.RecommendedPrice,
-                    BasePrice = pricingResult.BasePrice,
-                    DistanceFactor = pricingResult.Factors.DistanceFactor,
-                    WeightFactor = pricingResult.Factors.WeightFactor,
-                    VolumeFactor = pricingResult.Factors.VolumeFactor,
-                    UrgencyFactor = pricingResult.Factors.UrgencyFactor,
-                    SeasonalFactor = pricingResult.Factors.WeekendFactor,
-                    SpecialRequirementsFactor = pricingResult.Factors.SpecialRequirementsFactor,
-                    TimeOfDayFactor = pricingResult.Factors.PeakHoursFactor,
-                    DayOfWeekFactor = pricingResult.Factors.WeekendFactor,
-                    CalculatedAt = pricingResult.CalculatedAt,
+                    AlgorithmVersion = result.AlgorithmVersion,
+                    CalculatedPrice = result.RecommendedPrice,
+                    BasePrice = result.BasePrice,
+                    DistanceFactor = result.Factors.DistanceFactor,
+                    WeightFactor = result.Factors.WeightFactor,
+                    VolumeFactor = result.Factors.VolumeFactor,
+                    UrgencyFactor = result.Factors.UrgencyFactor,
+                    SeasonalFactor = result.Factors.WeekendFactor,
+                    SpecialRequirementsFactor = result.Factors.SpecialRequirementsFactor,
+                    TimeOfDayFactor = result.Factors.PeakHoursFactor,
+                    DayOfWeekFactor = result.Factors.WeekendFactor,
+                    CalculatedAt = result.CalculatedAt,
                     MarketDemand = "MEDIUM",
                     FuelCostEstimate = 0,
                     TollCostEstimate = 0,
                     DriverCostEstimate = 0,
                     VehicleCostEstimate = 0,
-                    AverageMarketPrice = pricingResult.RecommendedPrice,
+                    AverageMarketPrice = result.RecommendedPrice,
                     AvailableDriversCount = 0
                 };
 
