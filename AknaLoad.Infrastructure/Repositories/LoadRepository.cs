@@ -16,6 +16,21 @@ namespace AknaLoad.Infrastructure.Repositories
             _context = context;
         }
 
+        /// <summary>
+        /// Override GetByIdAsync to include all navigation properties (LoadStops, Matches, PricingCalculations, LoadTrackings)
+        /// </summary>
+        public new async Task<Load?> GetByIdAsync(long id, bool trackChanges = true)
+        {
+            var query = trackChanges ? _context.Loads.AsTracking() : _context.Loads.AsNoTracking();
+
+            return await query
+                .Include(l => l.LoadStops.OrderBy(s => s.StopOrder))
+                .Include(l => l.Matches)
+                .Include(l => l.PricingCalculations)
+                .Include(l => l.LoadTrackings)
+                .FirstOrDefaultAsync(l => l.Id == id);
+        }
+
         public async Task<List<Load>> GetByCompanyIdAsync(
             long companyId,
             LoadStatus? status = null,
@@ -38,6 +53,9 @@ namespace AknaLoad.Infrastructure.Repositories
 
             return await query
                 .Include(l => l.LoadStops)
+                .Include(l => l.Matches)
+                .Include(l => l.PricingCalculations)
+                .Include(l => l.LoadTrackings)
                 .OrderByDescending(l => l.CreatedDate)
                 .ToListAsync();
         }
@@ -128,6 +146,9 @@ namespace AknaLoad.Infrastructure.Repositories
             // Apply pagination
             var items = await query
                 .Include(l => l.LoadStops)
+                .Include(l => l.Matches)
+                .Include(l => l.PricingCalculations)
+                .Include(l => l.LoadTrackings)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
@@ -142,6 +163,7 @@ namespace AknaLoad.Infrastructure.Repositories
                 .Include(l => l.LoadStops.OrderBy(s => s.StopOrder))
                 .Include(l => l.Matches)
                 .Include(l => l.PricingCalculations)
+                .Include(l => l.LoadTrackings)
                 .FirstOrDefaultAsync(l => l.Id == id);
         }
 
@@ -150,6 +172,9 @@ namespace AknaLoad.Infrastructure.Repositories
             return await _context.Loads
                 .AsNoTracking()
                 .Include(l => l.LoadStops)
+                .Include(l => l.Matches)
+                .Include(l => l.PricingCalculations)
+                .Include(l => l.LoadTrackings)
                 .FirstOrDefaultAsync(l => l.LoadCode == loadCode);
         }
 
@@ -165,6 +190,9 @@ namespace AknaLoad.Infrastructure.Repositories
             return await query
                 .Where(l => l.Status == status)
                 .Include(l => l.LoadStops)
+                .Include(l => l.Matches)
+                .Include(l => l.PricingCalculations)
+                .Include(l => l.LoadTrackings)
                 .OrderByDescending(l => l.CreatedDate)
                 .ToListAsync();
         }
