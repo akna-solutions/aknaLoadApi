@@ -303,9 +303,8 @@ namespace AknaLoad.Application.Services
         private string GenerateRandomString(int length)
         {
             const string chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // Exclude similar looking characters
-            var random = new Random();
             return new string(Enumerable.Repeat(chars, length)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
+                .Select(s => s[Random.Shared.Next(s.Length)]).ToArray());
         }
 
         private void CalculateRouteInformation(Load load)
@@ -336,13 +335,19 @@ namespace AknaLoad.Application.Services
             load.EstimatedTotalDurationMinutes = totalDuration;
 
             // Set earliest pickup and latest delivery
-            load.EarliestPickupTime = orderedStops
+            var pickupStops = orderedStops
                 .Where(s => s.IsPickupStop && s.EarliestTime.HasValue)
-                .Min(s => s.EarliestTime);
+                .ToList();
+            load.EarliestPickupTime = pickupStops.Any()
+                ? pickupStops.Min(s => s.EarliestTime)
+                : null;
 
-            load.LatestDeliveryTime = orderedStops
+            var deliveryStops = orderedStops
                 .Where(s => s.IsDeliveryStop && s.LatestTime.HasValue)
-                .Max(s => s.LatestTime);
+                .ToList();
+            load.LatestDeliveryTime = deliveryStops.Any()
+                ? deliveryStops.Max(s => s.LatestTime)
+                : null;
         }
     }
 }

@@ -209,7 +209,7 @@ namespace AknaLoad.Application.Services
                 };
 
                 await _pricingRepository.AddAsync(calculation);
-                await _unitOfWork.CommitAsync();
+                await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Pricing calculation saved for load {LoadId}", loadId);
                 return calculation;

@@ -298,6 +298,11 @@ namespace AknaLoad.Api.Controllers
             };
 
             // Map load stops
+            if (dto.LoadStops == null || !dto.LoadStops.Any())
+            {
+                throw new ArgumentException("At least one load stop is required");
+            }
+
             foreach (var stopDto in dto.LoadStops)
             {
                 load.LoadStops.Add(new LoadStop

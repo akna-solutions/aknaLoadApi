@@ -28,20 +28,20 @@ builder.Services.AddScoped<IPricingCalculationRepository, PricingCalculationRepo
 
 // Business Services
 builder.Services.AddScoped<ILoadService, LoadService>();
-builder.Services.AddScoped<IMatchingService, MatchingService>();
+// builder.Services.AddScoped<IMatchingService, MatchingService>(); // Not implemented yet
 builder.Services.AddScoped<IPricingService, PricingService>();
 builder.Services.AddScoped<PricingService>(); // Concrete type for controller
 builder.Services.AddScoped<IGeminiAIService, GeminiAIService>(); // AI service for pricing and vehicle matching
 // builder.Services.AddScoped<ITrackingService, TrackingService>(); // Will be implemented later
 
 // External Services
-builder.Services.AddHttpClient<IVehicleService, VehicleService>(client =>
-{
-    var identityServiceBaseUrl = builder.Configuration["Services:IdentityService:BaseUrl"] ?? "https://localhost:7001";
-    client.BaseAddress = new Uri(identityServiceBaseUrl);
-    client.Timeout = TimeSpan.FromSeconds(30);
-});
-builder.Services.AddScoped<IVehicleService, VehicleService>();
+// VehicleService not implemented yet, commenting out to prevent runtime errors
+// builder.Services.AddHttpClient<IVehicleService, VehicleService>(client =>
+// {
+//     var identityServiceBaseUrl = builder.Configuration["Services:IdentityService:BaseUrl"] ?? "https://localhost:7001";
+//     client.BaseAddress = new Uri(identityServiceBaseUrl);
+//     client.Timeout = TimeSpan.FromSeconds(30);
+// });
 
 // Controllers
 // Controllers
@@ -138,6 +138,9 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+// Global error handling middleware (must be first in pipeline)
+app.UseMiddleware<GlobalErrorHandlingMiddleware>();
+
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
@@ -148,9 +151,6 @@ app.MapControllers();
 
 // Health check endpoint
 app.MapHealthChecks("/health");
-
-// Global error handling middleware
-app.UseMiddleware<GlobalErrorHandlingMiddleware>();
 
 app.Run();
 
