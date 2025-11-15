@@ -172,6 +172,54 @@ namespace AknaLoad.Api.Controllers
         }
 
         /// <summary>
+        /// Update an existing load
+        /// </summary>
+        [HttpPut("{id}")]
+        [ProducesResponseType(typeof(LoadResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateLoad(long id, [FromBody] UpdateLoadDto dto)
+        {
+            try
+            {
+                if (id != dto.Id)
+                {
+                    return BadRequest(new { error = "ID in route does not match ID in request body" });
+                }
+
+                // Get existing load first
+                var existingLoad = await _loadService.GetLoadByIdAsync(id);
+                if (existingLoad == null)
+                {
+                    return NotFound(new { error = $"Load with ID {id} not found" });
+                }
+
+                var load = MapToEntityForUpdate(dto, existingLoad);
+                var updatedBy = "system"; // TODO: Get from authentication context
+
+                var updatedLoad = await _loadService.UpdateLoadAsync(load, updatedBy);
+
+                var response = MapToResponseDto(updatedLoad);
+                return Ok(response);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Validation error while updating load {LoadId}", id);
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex, "Invalid operation while updating load {LoadId}", id);
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating load {LoadId}", id);
+                return StatusCode(500, new { error = "An error occurred while updating the load" });
+            }
+        }
+
+        /// <summary>
         /// Publish load (make it available for matching)
         /// </summary>
         [HttpPost("{id}/publish")]
@@ -270,6 +318,78 @@ namespace AknaLoad.Api.Controllers
         }
 
         #region Mapping Methods
+
+        private Load MapToEntityForUpdate(UpdateLoadDto dto, Load existingLoad)
+        {
+            // Update basic properties
+            existingLoad.Title = dto.Title;
+            existingLoad.Description = dto.Description;
+            existingLoad.Weight = dto.Weight;
+            existingLoad.Volume = dto.Volume;
+            existingLoad.LoadType = dto.LoadType;
+            existingLoad.FixedPrice = dto.FixedPrice;
+            existingLoad.ContactPersonName = dto.ContactPersonName;
+            existingLoad.ContactPhone = dto.ContactPhone;
+            existingLoad.ContactEmail = dto.ContactEmail;
+            existingLoad.IsMultiStop = dto.IsMultiStop;
+            existingLoad.RoutingStrategy = dto.RoutingStrategy;
+            existingLoad.SpecialRequirements = dto.SpecialRequirements ?? new List<SpecialRequirement>();
+            existingLoad.Dimensions = dto.Dimensions != null ? new Dimensions
+            {
+                Length = dto.Dimensions.Length,
+                Width = dto.Dimensions.Width,
+                Height = dto.Dimensions.Height,
+                Unit = dto.Dimensions.Unit
+            } : null;
+
+            // Clear and re-add load stops
+            existingLoad.LoadStops.Clear();
+
+            if (dto.LoadStops == null || !dto.LoadStops.Any())
+            {
+                throw new ArgumentException("At least one load stop is required");
+            }
+
+            foreach (var stopDto in dto.LoadStops)
+            {
+                existingLoad.LoadStops.Add(new LoadStop
+                {
+                    LoadId = existingLoad.Id,
+                    StopOrder = stopDto.StopOrder,
+                    StopType = stopDto.StopType,
+                    Location = new Location
+                    {
+                        Latitude = stopDto.Location.Latitude,
+                        Longitude = stopDto.Location.Longitude,
+                        Address = stopDto.Location.Address,
+                        City = stopDto.Location.City,
+                        District = stopDto.Location.District,
+                        PostalCode = stopDto.Location.PostalCode,
+                        Country = stopDto.Location.Country,
+                        LocationName = stopDto.Location.LocationName,
+                        AccessInstructions = stopDto.Location.AccessInstructions,
+                        ContactPerson = stopDto.Location.ContactPerson,
+                        ContactPhone = stopDto.Location.ContactPhone
+                    },
+                    EarliestTime = stopDto.EarliestTime,
+                    LatestTime = stopDto.LatestTime,
+                    PlannedTime = stopDto.PlannedTime,
+                    EstimatedDurationMinutes = stopDto.EstimatedDurationMinutes,
+                    PickupWeight = stopDto.PickupWeight,
+                    DeliveryWeight = stopDto.DeliveryWeight,
+                    PickupVolume = stopDto.PickupVolume,
+                    DeliveryVolume = stopDto.DeliveryVolume,
+                    LoadDescription = stopDto.LoadDescription,
+                    SpecialInstructions = stopDto.SpecialInstructions,
+                    SpecialRequirements = stopDto.SpecialRequirements ?? new List<SpecialRequirement>(),
+                    ContactPersonName = stopDto.ContactPersonName,
+                    ContactPhone = stopDto.ContactPhone,
+                    ContactEmail = stopDto.ContactEmail
+                });
+            }
+
+            return existingLoad;
+        }
 
         private Load MapToEntity(CreateLoadDto dto)
         {
