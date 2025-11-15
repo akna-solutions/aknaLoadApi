@@ -21,6 +21,14 @@ namespace AknaLoad.Domain.Configurations
             builder.HasIndex(x => x.RouteCode)
                 .IsUnique();
 
+            // One-to-One relationship with Load
+            builder.HasOne(x => x.Load)
+                .WithOne(x => x.Route)
+                .HasForeignKey<Route>(x => x.LoadId)
+                .OnDelete(DeleteBehavior.SetNull); // Route can exist without Load
+
+            builder.HasIndex(x => x.LoadId)
+                .IsUnique(); // Ensure one-to-one relationship
 
             // Route details with precision
             builder.Property(x => x.TotalDistance)

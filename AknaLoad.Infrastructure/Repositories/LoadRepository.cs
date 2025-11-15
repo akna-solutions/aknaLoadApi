@@ -17,7 +17,7 @@ namespace AknaLoad.Infrastructure.Repositories
         }
 
         /// <summary>
-        /// Override GetByIdAsync to include all navigation properties (LoadStops, Matches, PricingCalculations, LoadTrackings)
+        /// Override GetByIdAsync to include all navigation properties (LoadStops, Matches, PricingCalculations, LoadTrackings, Route)
         /// </summary>
         public new async Task<Load?> GetByIdAsync(long id, bool trackChanges = true)
         {
@@ -28,6 +28,7 @@ namespace AknaLoad.Infrastructure.Repositories
                 .Include(l => l.Matches)
                 .Include(l => l.PricingCalculations)
                 .Include(l => l.LoadTrackings)
+                .Include(l => l.Route)
                 .FirstOrDefaultAsync(l => l.Id == id);
         }
 
@@ -164,6 +165,7 @@ namespace AknaLoad.Infrastructure.Repositories
                 .Include(l => l.Matches)
                 .Include(l => l.PricingCalculations)
                 .Include(l => l.LoadTrackings)
+                .Include(l => l.Route)
                 .FirstOrDefaultAsync(l => l.Id == id);
         }
 
@@ -175,6 +177,7 @@ namespace AknaLoad.Infrastructure.Repositories
                 .Include(l => l.Matches)
                 .Include(l => l.PricingCalculations)
                 .Include(l => l.LoadTrackings)
+                .Include(l => l.Route)
                 .FirstOrDefaultAsync(l => l.LoadCode == loadCode);
         }
 

@@ -9,6 +9,8 @@ namespace AknaLoad.Domain.Interfaces.Repositories
     {
         Task<Route?> GetRouteByCodeAsync(string routeCode);
 
+        Task<bool> IsRouteCodeUniqueAsync(string routeCode);
+
         Task<List<Route>> FindSimilarRoutesAsync(
             Location startLocation,
             Location endLocation,

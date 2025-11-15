@@ -9,6 +9,11 @@ namespace AknaLoad.Domain.Entities
     public class Route : BaseEntity
     {
         public string RouteCode { get; set; } = string.Empty; // Auto-generated unique code
+
+        // One-to-One relationship with Load
+        public long? LoadId { get; set; }
+        public virtual Load? Load { get; set; }
+
         public string StartLocationJson { get; set; } = string.Empty; // JSON serialized Location
         public string EndLocationJson { get; set; } = string.Empty; // JSON serialized Location
         public string? WaypointsJson { get; set; } // JSON array of Location objects

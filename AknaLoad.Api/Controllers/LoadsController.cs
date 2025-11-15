@@ -420,7 +420,36 @@ namespace AknaLoad.Api.Controllers
                     ActualArrivalTime = s.ActualArrivalTime,
                     ActualDepartureTime = s.ActualDepartureTime,
                     CompletionNotes = s.CompletionNotes
-                }).ToList()
+                }).ToList(),
+                Route = load.Route != null ? MapToRouteResponseDto(load.Route) : null
+            };
+        }
+
+        private AknaLoad.Api.DTOs.Route.RouteResponseDto MapToRouteResponseDto(AknaLoad.Domain.Entities.Route route)
+        {
+            return new AknaLoad.Api.DTOs.Route.RouteResponseDto
+            {
+                Id = route.Id,
+                RouteCode = route.RouteCode,
+                LoadId = route.LoadId,
+                TotalDistance = route.TotalDistance,
+                EstimatedDuration = route.EstimatedDuration,
+                TollCost = route.TollCost,
+                FuelCost = route.FuelCost,
+                RouteType = route.RouteType,
+                TrafficLevel = route.TrafficLevel,
+                RoadConditions = route.RoadConditions,
+                WeatherConditions = route.WeatherConditions,
+                DifficultyScore = route.DifficultyScore,
+                IsOptimized = route.IsOptimized,
+                EarliestDepartureTime = route.EarliestDepartureTime,
+                LatestArrivalTime = route.LatestArrivalTime,
+                UsageCount = route.UsageCount,
+                AverageActualDuration = route.AverageActualDuration,
+                AverageActualDistance = route.AverageActualDistance,
+                LastUsedAt = route.LastUsedAt,
+                CreatedAt = route.CreatedDate,
+                UpdatedAt = route.UpdatedDate
             };
         }
 
