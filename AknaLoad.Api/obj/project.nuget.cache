@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+mDC0DGdkrMnuiXuHbmEgLPI7LSSmE/rsc4MunRt5NG3ic4NDS3E/1Thxs1Gic2gCNHq2dU6+TqowI1eUsqFnw==",
+  "dgSpecHash": "sAJTptc9p2nclYNk4dRKNS/xavH/w3LjLJDidXbrC1whf5UK1BMkkq+cuDsjpzXz+QnhcB54JHltbPlpeJmGsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\AknaLoad.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mert\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Mert\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Mert\\.nuget\\packages\\google_generativeai\\3.4.1\\google_generativeai.3.4.1.nupkg.sha512",
     "C:\\Users\\Mert\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Mert\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.0\\microsoft.aspnetcore.jsonpatch.8.0.0.nupkg.sha512",
     "C:\\Users\\Mert\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.0.nupkg.sha512",

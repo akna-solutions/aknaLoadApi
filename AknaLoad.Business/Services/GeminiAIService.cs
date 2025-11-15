@@ -1,5 +1,5 @@
 using AknaLoad.Domain.Enums;
-using Google.GenerativeAI;
+using GenerativeAI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;

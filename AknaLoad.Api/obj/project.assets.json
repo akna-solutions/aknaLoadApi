@@ -47,6 +47,23 @@
           }
         }
       },
+      "Google_GenerativeAI/3.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "9.0.3",
+          "System.Text.Json": "9.0.3"
+        },
+        "compile": {
+          "lib/net8.0/GenerativeAI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/GenerativeAI.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1799,6 +1816,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AknaLoad.Domain": "1.0.0",
+          "Google_GenerativeAI": "3.4.1",
           "Microsoft.Extensions.Configuration": "9.0.10",
           "Microsoft.Extensions.Logging": "9.0.10"
         },
@@ -1872,6 +1890,31 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Google_GenerativeAI/3.4.1": {
+      "sha512": "zNqvXBnqzX0mk2Lz1Sl1lvmsPlSFNDjHY7pl/k1CBJefpOdjwiNArPEsoCUxAl0frJyACwc/Jsdv7Dj/xKX2uw==",
+      "type": "package",
+      "path": "google_generativeai/3.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "favicon.png",
+        "google_generativeai.3.4.1.nupkg.sha512",
+        "google_generativeai.nuspec",
+        "lib/net462/GenerativeAI.dll",
+        "lib/net462/GenerativeAI.xml",
+        "lib/net6.0/GenerativeAI.dll",
+        "lib/net6.0/GenerativeAI.xml",
+        "lib/net7.0/GenerativeAI.dll",
+        "lib/net7.0/GenerativeAI.xml",
+        "lib/net8.0/GenerativeAI.dll",
+        "lib/net8.0/GenerativeAI.xml",
+        "lib/net9.0/GenerativeAI.dll",
+        "lib/net9.0/GenerativeAI.xml",
+        "lib/netstandard2.0/GenerativeAI.dll",
+        "lib/netstandard2.0/GenerativeAI.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {

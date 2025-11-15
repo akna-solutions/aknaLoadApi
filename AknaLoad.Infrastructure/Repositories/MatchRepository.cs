@@ -7,8 +7,5 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AknaLoad.Infrastructure.Repositories
 {
-    public class MatchRepository : BaseRepository<Match>, IMatchRepository
-    {
-     
-    }
+
 }

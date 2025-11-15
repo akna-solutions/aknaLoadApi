@@ -23,7 +23,6 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddScoped<ILoadRepository, LoadRepository>();
 builder.Services.AddScoped<IDriverRepository, DriverRepository>();
-builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 builder.Services.AddScoped<IPricingCalculationRepository, PricingCalculationRepository>();
 
 // Business Services

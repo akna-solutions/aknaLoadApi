@@ -3,68 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.api\\controllers\\loadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|solutionrelative:aknaload.api\\controllers\\loadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECB75D69-6B86-405C-AB1B-EF666E4E62C5}|AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.infrastructure\\repositories\\loadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB75D69-6B86-405C-AB1B-EF666E4E62C5}|AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj|solutionrelative:aknaload.infrastructure\\repositories\\loadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ECB75D69-6B86-405C-AB1B-EF666E4E62C5}|AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.infrastructure\\configurations\\loadconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ECB75D69-6B86-405C-AB1B-EF666E4E62C5}|AknaLoad.Infrastructure\\AknaLoad.Infrastructure.csproj|solutionrelative:aknaload.infrastructure\\configurations\\loadconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5930ECB-EC01-458F-AEDD-188A450E1F79}|AknaLoad.Domain\\AknaLoad.Domain.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.domain\\entities\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5930ECB-EC01-458F-AEDD-188A450E1F79}|AknaLoad.Domain\\AknaLoad.Domain.csproj|solutionrelative:aknaload.domain\\entities\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77619EE6-E355-4981-8A39-47506CDD4B72}|AknaLoad.Business\\AknaLoad.Business.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.business\\services\\loadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77619EE6-E355-4981-8A39-47506CDD4B72}|AknaLoad.Business\\AknaLoad.Business.csproj|solutionrelative:aknaload.business\\services\\loadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.api\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|solutionrelative:aknaload.api\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5930ECB-EC01-458F-AEDD-188A450E1F79}|AknaLoad.Domain\\AknaLoad.Domain.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.domain\\enums\\loadstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5930ECB-EC01-458F-AEDD-188A450E1F79}|AknaLoad.Domain\\AknaLoad.Domain.csproj|solutionrelative:aknaload.domain\\enums\\loadstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|solutionrelative:aknaload.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\Requests\\OptimizeRouteRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Dtos\\Requests\\OptimizeRouteRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.api\\controllers\\pricingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2923FD4-16C8-4C99-8D3F-48B65037225A}|AknaLoad.Api\\AknaLoad.Api.csproj|solutionrelative:aknaload.api\\controllers\\pricingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\Requests\\UpdateStopStatusRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Dtos\\Requests\\UpdateStopStatusRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\LoadStopResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Dtos\\LoadStopResponseDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Configurations\\LoadStopConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Infrastructure\\Configurations\\LoadStopConfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Entities\\LoadStop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Entities\\LoadStop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadRoutingStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Enums\\LoadRoutingStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStopStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Enums\\LoadStopStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStopType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AknaLoad.Domain\\Enums\\LoadStopType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77619EE6-E355-4981-8A39-47506CDD4B72}|AknaLoad.Business\\AknaLoad.Business.csproj|c:\\users\\mert\\desktop\\big-boss\\aknaloadapi\\aknaload.business\\services\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77619EE6-E355-4981-8A39-47506CDD4B72}|AknaLoad.Business\\AknaLoad.Business.csproj|solutionrelative:aknaload.business\\services\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,205 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoadService.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\Services\\LoadService.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Business\\Services\\LoadService.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\Services\\LoadService.cs",
-              "RelativeToolTip": "AknaLoad.Business\\Services\\LoadService.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAUwCYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T18:06:38.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MatchController.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Controllers\\MatchController.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Api\\Controllers\\MatchController.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Controllers\\MatchController.cs",
-              "RelativeToolTip": "AknaLoad.Api\\Controllers\\MatchController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCwAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T20:10:18.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Repositories\\LoadRepository.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Infrastructure\\Repositories\\LoadRepository.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Repositories\\LoadRepository.cs",
-              "RelativeToolTip": "AknaLoad.Infrastructure\\Repositories\\LoadRepository.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAASwDIAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T19:58:24.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OptimizeRouteRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\Requests\\OptimizeRouteRequest.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Dtos\\Requests\\OptimizeRouteRequest.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\Requests\\OptimizeRouteRequest.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Dtos\\Requests\\OptimizeRouteRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T22:06:59.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateStopStatusRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\Requests\\UpdateStopStatusRequest.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Dtos\\Requests\\UpdateStopStatusRequest.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\Requests\\UpdateStopStatusRequest.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Dtos\\Requests\\UpdateStopStatusRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T22:06:45.995Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoadStopResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\LoadStopResponseDto.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Dtos\\LoadStopResponseDto.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Dtos\\LoadStopResponseDto.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Dtos\\LoadStopResponseDto.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAQwCwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T22:06:34.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoadStopConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Configurations\\LoadStopConfiguration.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Infrastructure\\Configurations\\LoadStopConfiguration.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Configurations\\LoadStopConfiguration.cs",
-              "RelativeToolTip": "AknaLoad.Infrastructure\\Configurations\\LoadStopConfiguration.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAqwA8AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T22:03:09.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoadStop.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Entities\\LoadStop.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Entities\\LoadStop.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Entities\\LoadStop.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Entities\\LoadStop.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAADwvwIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T22:02:31.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoadConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Configurations\\LoadConfiguration.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Infrastructure\\Configurations\\LoadConfiguration.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Infrastructure\\Configurations\\LoadConfiguration.cs",
-              "RelativeToolTip": "AknaLoad.Infrastructure\\Configurations\\LoadConfiguration.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAawHoAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T22:00:52.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Load.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Entities\\Load.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Entities\\Load.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Entities\\Load.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Entities\\Load.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T21:59:50.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LoadRoutingStrategy.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadRoutingStrategy.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Enums\\LoadRoutingStrategy.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadRoutingStrategy.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Enums\\LoadRoutingStrategy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T21:59:18.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoadStopStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStopStatus.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Enums\\LoadStopStatus.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStopStatus.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Enums\\LoadStopStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T21:59:07.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LoadStopType.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStopType.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Enums\\LoadStopType.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStopType.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Enums\\LoadStopType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T21:58:34.469Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoadController.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Controllers\\LoadController.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Api\\Controllers\\LoadController.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Controllers\\LoadController.cs",
-              "RelativeToolTip": "AknaLoad.Api\\Controllers\\LoadController.cs",
-              "ViewState": "AQIAAIYBAAAAAAAAAAASwJYBAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T20:45:39.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoadStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStatus.cs",
-              "RelativeDocumentMoniker": "AknaLoad.Domain\\Enums\\LoadStatus.cs",
-              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Domain\\Enums\\LoadStatus.cs",
-              "RelativeToolTip": "AknaLoad.Domain\\Enums\\LoadStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T20:41:38.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Program.cs",
               "RelativeDocumentMoniker": "AknaLoad.Api\\Program.cs",
               "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Program.cs",
               "RelativeToolTip": "AknaLoad.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAeAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAwwCAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T20:38:54.919Z"
+              "WhenOpened": "2025-11-15T14:17:19.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PricingController.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Controllers\\PricingController.cs",
+              "RelativeDocumentMoniker": "AknaLoad.Api\\Controllers\\PricingController.cs",
+              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Api\\Controllers\\PricingController.cs",
+              "RelativeToolTip": "AknaLoad.Api\\Controllers\\PricingController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAwwCwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T14:17:11.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PricingService.cs",
+              "DocumentMoniker": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\Services\\PricingService.cs",
+              "RelativeDocumentMoniker": "AknaLoad.Business\\Services\\PricingService.cs",
+              "ToolTip": "C:\\Users\\Mert\\Desktop\\big-boss\\aknaLoadApi\\AknaLoad.Business\\Services\\PricingService.cs",
+              "RelativeToolTip": "AknaLoad.Business\\Services\\PricingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T14:17:07.515Z",
+              "EditorCaption": ""
             }
           ]
         }
