@@ -1,3 +1,4 @@
+using AknaLoad.Api.DTOs.Route;
 using AknaLoad.Domain.Enums;
 
 namespace AknaLoad.Api.DTOs.Load
@@ -40,6 +41,9 @@ namespace AknaLoad.Api.DTOs.Load
         public string? ContactPersonName { get; set; }
         public string? ContactPhone { get; set; }
         public string? ContactEmail { get; set; }
+
+        // Route Information (detailed)
+        public RouteResponseDto? Route { get; set; }
 
         // Metadata
         public DateTime CreatedAt { get; set; }

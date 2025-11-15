@@ -78,6 +78,7 @@ namespace AknaLoad.Domain.Entities
         public virtual ICollection<Match> Matches { get; set; } = new List<Match>();
         public virtual ICollection<PricingCalculation> PricingCalculations { get; set; } = new List<PricingCalculation>();
         public virtual ICollection<LoadTracking> LoadTrackings { get; set; } = new List<LoadTracking>();
+        public virtual Route? Route { get; set; } // One-to-One relationship
 
         // Helper Properties (not mapped to database)
         [NotMapped]

@@ -15,6 +15,8 @@ namespace AknaLoad.Application.Services
         Task<List<VehicleRecommendation>> GetVehicleRecommendationsAsync(decimal weight,
             decimal? volume, LoadType loadType, List<SpecialRequirement> specialRequirements,
             decimal? length = null, decimal? width = null, decimal? height = null);
+
+        Task<RouteCalculationResult> CalculateRouteAsync(List<RouteStopInfo> stops);
     }
 
     public class GeminiAIService : IGeminiAIService
@@ -302,6 +304,142 @@ En az 2, en fazla 4 araç tipi öner. En uygun olandan başla.";
 
             return recommendations;
         }
+
+        public async Task<RouteCalculationResult> CalculateRouteAsync(List<RouteStopInfo> stops)
+        {
+            try
+            {
+                if (stops == null || stops.Count < 2)
+                {
+                    return new RouteCalculationResult
+                    {
+                        TotalDistanceKm = 0,
+                        EstimatedDurationMinutes = 0,
+                        Success = false,
+                        ErrorMessage = "En az 2 durak gereklidir"
+                    };
+                }
+
+                var model = new GenerativeModel(apiKey: _apiKey, model: "gemini-1.5-flash");
+
+                var stopsInfo = string.Join("\n", stops.Select((s, i) =>
+                    $"{i + 1}. {s.City}, {s.District} (Enlem: {s.Latitude}, Boylam: {s.Longitude})"));
+
+                var prompt = $@"Sen bir lojistik rota planlama uzmanısın. Aşağıdaki duraklar arasındaki toplam mesafeyi ve tahmini süreyi hesapla:
+
+{stopsInfo}
+
+Görevler:
+1. Duraklar arasındaki toplam yol mesafesini hesapla (Türkiye yollarını kullanarak)
+2. Tahmini seyahat süresini hesapla (trafik ve mola dahil)
+3. Yakıt maliyeti tahmini yap (ortalama dizel fiyatı: 35 TL/litre, ortalama tüketim: 30 lt/100km)
+4. Geçiş ücreti tahmini yap (varsa)
+
+SADECE JSON formatında yanıt ver:
+{{
+  ""totalDistanceKm"": toplam mesafe (sayısal),
+  ""estimatedDurationMinutes"": tahmini süre dakika cinsinden (sayısal),
+  ""estimatedFuelCost"": tahmini yakıt maliyeti TL (sayısal),
+  ""estimatedTollCost"": tahmini geçiş ücreti TL (sayısal),
+  ""routeDescription"": ""rota açıklaması""
+}}";
+
+                var response = await model.GenerateContentAsync(prompt);
+                var resultText = response.Text.Trim();
+
+                // Remove markdown code blocks if present
+                if (resultText.StartsWith("```json"))
+                {
+                    resultText = resultText.Substring(7);
+                }
+                if (resultText.StartsWith("```"))
+                {
+                    resultText = resultText.Substring(3);
+                }
+                if (resultText.EndsWith("```"))
+                {
+                    resultText = resultText.Substring(0, resultText.Length - 3);
+                }
+                resultText = resultText.Trim();
+
+                var result = JsonSerializer.Deserialize<RouteCalculationResult>(resultText, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+
+                if (result != null)
+                {
+                    result.Success = true;
+                    _logger.LogInformation("AI calculated route: {Distance}km, {Duration}min",
+                        result.TotalDistanceKm, result.EstimatedDurationMinutes);
+                    return result;
+                }
+
+                _logger.LogWarning("Could not parse AI response for route calculation");
+                return GetFallbackRouteCalculation(stops);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error calling Gemini AI for route calculation");
+                return GetFallbackRouteCalculation(stops);
+            }
+        }
+
+        private RouteCalculationResult GetFallbackRouteCalculation(List<RouteStopInfo> stops)
+        {
+            // Simple fallback: calculate straight-line distance and estimate
+            decimal totalDistance = 0;
+
+            for (int i = 0; i < stops.Count - 1; i++)
+            {
+                var distance = CalculateHaversineDistance(
+                    stops[i].Latitude, stops[i].Longitude,
+                    stops[i + 1].Latitude, stops[i + 1].Longitude);
+
+                // Add 30% for road routing (not straight line)
+                totalDistance += distance * 1.3m;
+            }
+
+            // Estimate duration (average speed 60 km/h)
+            var estimatedDuration = (int)(totalDistance / 60m * 60m); // convert to minutes
+
+            // Estimate fuel cost (30 liters per 100km, 35 TL per liter)
+            var estimatedFuelCost = (totalDistance / 100m) * 30m * 35m;
+
+            // Estimate toll cost (rough estimate based on distance)
+            var estimatedTollCost = totalDistance > 200 ? totalDistance * 0.5m : 0;
+
+            return new RouteCalculationResult
+            {
+                TotalDistanceKm = Math.Round(totalDistance, 2),
+                EstimatedDurationMinutes = estimatedDuration,
+                EstimatedFuelCost = Math.Round(estimatedFuelCost, 2),
+                EstimatedTollCost = Math.Round(estimatedTollCost, 2),
+                RouteDescription = "Otomatik hesaplama (basitleştirilmiş)",
+                Success = true
+            };
+        }
+
+        private decimal CalculateHaversineDistance(decimal lat1, decimal lon1, decimal lat2, decimal lon2)
+        {
+            const decimal R = 6371; // Earth's radius in km
+
+            var dLat = ToRadians(lat2 - lat1);
+            var dLon = ToRadians(lon2 - lon1);
+
+            var a = (decimal)(Math.Sin((double)dLat / 2) * Math.Sin((double)dLat / 2) +
+                    Math.Cos((double)ToRadians(lat1)) * Math.Cos((double)ToRadians(lat2)) *
+                    Math.Sin((double)dLon / 2) * Math.Sin((double)dLon / 2));
+
+            var c = (decimal)(2 * Math.Atan2(Math.Sqrt((double)a), Math.Sqrt((double)(1 - a))));
+
+            return R * c;
+        }
+
+        private decimal ToRadians(decimal degrees)
+        {
+            return degrees * (decimal)Math.PI / 180m;
+        }
     }
 
     public class VehicleRecommendation
@@ -312,5 +450,24 @@ En az 2, en fazla 4 araç tipi öner. En uygun olandan başla.";
         public decimal MaxWeight { get; set; }
         public decimal? MaxVolume { get; set; }
         public decimal? EstimatedCost { get; set; }
+    }
+
+    public class RouteStopInfo
+    {
+        public string City { get; set; } = string.Empty;
+        public string District { get; set; } = string.Empty;
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
+    }
+
+    public class RouteCalculationResult
+    {
+        public decimal TotalDistanceKm { get; set; }
+        public int EstimatedDurationMinutes { get; set; }
+        public decimal? EstimatedFuelCost { get; set; }
+        public decimal? EstimatedTollCost { get; set; }
+        public string? RouteDescription { get; set; }
+        public bool Success { get; set; }
+        public string? ErrorMessage { get; set; }
     }
 }

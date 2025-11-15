@@ -11,11 +11,19 @@ namespace AknaLoad.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly ILoadRepository _loadRepository;
+        private readonly IRouteRepository _routeRepository;
+        private readonly IGeminiAIService _geminiAIService;
 
-        public LoadService(IUnitOfWork unitOfWork, ILoadRepository loadRepository)
+        public LoadService(
+            IUnitOfWork unitOfWork,
+            ILoadRepository loadRepository,
+            IRouteRepository routeRepository,
+            IGeminiAIService geminiAIService)
         {
             _unitOfWork = unitOfWork;
             _loadRepository = loadRepository;
+            _routeRepository = routeRepository;
+            _geminiAIService = geminiAIService;
         }
 
         public async Task<Load> CreateLoadAsync(Load load, string createdBy)
@@ -46,9 +54,12 @@ namespace AknaLoad.Application.Services
                 CalculateRouteInformation(load);
             }
 
-            // Add to repository
+            // Add to repository first to get the Load ID
             await _loadRepository.AddAsync(load);
             await _unitOfWork.SaveChangesAsync();
+
+            // Create Route record using Gemini AI
+            await CreateRouteForLoadAsync(load, createdBy);
 
             return load;
         }
@@ -348,6 +359,106 @@ namespace AknaLoad.Application.Services
             load.LatestDeliveryTime = deliveryStops.Any()
                 ? deliveryStops.Max(s => s.LatestTime)
                 : null;
+        }
+
+        private async Task CreateRouteForLoadAsync(Load load, string createdBy)
+        {
+            if (!load.LoadStops.Any()) return;
+
+            var orderedStops = load.LoadStops.OrderBy(s => s.StopOrder).ToList();
+
+            // Convert LoadStops to RouteStopInfo for Gemini AI
+            var routeStops = orderedStops.Select(stop => new RouteStopInfo
+            {
+                City = stop.Location?.City ?? string.Empty,
+                District = stop.Location?.District ?? string.Empty,
+                Latitude = stop.Location?.Latitude ?? 0,
+                Longitude = stop.Location?.Longitude ?? 0
+            }).ToList();
+
+            // Calculate route using Gemini AI
+            var routeCalculation = await _geminiAIService.CalculateRouteAsync(routeStops);
+
+            if (!routeCalculation.Success)
+            {
+                // Log warning but don't fail the load creation
+                return;
+            }
+
+            // Generate unique route code
+            var routeCode = await GenerateRouteCodeAsync();
+
+            // Create Route entity
+            var route = new Route
+            {
+                RouteCode = routeCode,
+                LoadId = load.Id,
+                StartLocation = orderedStops.First().Location,
+                EndLocation = orderedStops.Last().Location,
+                TotalDistance = routeCalculation.TotalDistanceKm,
+                EstimatedDuration = routeCalculation.EstimatedDurationMinutes,
+                TollCost = routeCalculation.EstimatedTollCost,
+                FuelCost = routeCalculation.EstimatedFuelCost,
+                RouteType = RouteType.Optimal,
+                TrafficLevel = "MEDIUM",
+                DifficultyScore = 1.0m,
+                IsOptimized = true,
+                CreatedUser = createdBy,
+                CreatedDate = DateTime.UtcNow,
+                UpdatedUser = createdBy,
+                UpdatedDate = DateTime.UtcNow
+            };
+
+            // Add waypoints if there are intermediate stops
+            if (orderedStops.Count > 2)
+            {
+                var waypoints = orderedStops.Skip(1).Take(orderedStops.Count - 2)
+                    .Select(s => s.Location)
+                    .Where(l => l != null)
+                    .ToList();
+                route.Waypoints = waypoints!;
+            }
+
+            // Set time windows
+            route.EarliestDepartureTime = load.EarliestPickupTime;
+            route.LatestArrivalTime = load.LatestDeliveryTime;
+
+            // Add route to repository
+            await _routeRepository.AddAsync(route);
+            await _unitOfWork.SaveChangesAsync();
+
+            // Update load with route information from Gemini (more accurate than simple calculation)
+            load.TotalDistanceKm = routeCalculation.TotalDistanceKm;
+            load.EstimatedTotalDurationMinutes = routeCalculation.EstimatedDurationMinutes;
+            _loadRepository.Update(load);
+            await _unitOfWork.SaveChangesAsync();
+        }
+
+        private async Task<string> GenerateRouteCodeAsync()
+        {
+            string routeCode;
+            bool isUnique;
+            int attempts = 0;
+            const int maxAttempts = 10;
+
+            do
+            {
+                // Format: ROUTE-YYYYMMDD-XXXXX (e.g., ROUTE-20241114-A1B2C)
+                var datePart = DateTime.UtcNow.ToString("yyyyMMdd");
+                var randomPart = GenerateRandomString(5);
+                routeCode = $"ROUTE-{datePart}-{randomPart}";
+
+                isUnique = await _routeRepository.IsRouteCodeUniqueAsync(routeCode);
+                attempts++;
+
+            } while (!isUnique && attempts < maxAttempts);
+
+            if (!isUnique)
+            {
+                throw new InvalidOperationException("Failed to generate unique route code");
+            }
+
+            return routeCode;
         }
     }
 }
