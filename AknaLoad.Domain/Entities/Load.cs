@@ -141,8 +141,14 @@ namespace AknaLoad.Domain.Entities
         {
             if (!LoadStops.Any()) return TimeSpan.Zero;
 
-            var earliest = LoadStops.Where(s => s.EarliestTime.HasValue).Min(s => s.EarliestTime!.Value);
-            var latest = LoadStops.Where(s => s.LatestTime.HasValue).Max(s => s.LatestTime!.Value);
+            var stopsWithEarliest = LoadStops.Where(s => s.EarliestTime.HasValue).ToList();
+            var stopsWithLatest = LoadStops.Where(s => s.LatestTime.HasValue).ToList();
+
+            if (!stopsWithEarliest.Any() || !stopsWithLatest.Any())
+                return TimeSpan.Zero;
+
+            var earliest = stopsWithEarliest.Min(s => s.EarliestTime!.Value);
+            var latest = stopsWithLatest.Max(s => s.LatestTime!.Value);
 
             return latest - earliest;
         }

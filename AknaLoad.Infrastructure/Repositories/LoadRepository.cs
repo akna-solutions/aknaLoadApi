@@ -107,7 +107,7 @@ namespace AknaLoad.Infrastructure.Repositories
             if (!string.IsNullOrEmpty(destinationCity))
             {
                 query = query.Where(l => l.LoadStops
-                    .OrderByDescending(s => s.StopOrder)
+                    .Where(s => s.StopOrder == l.LoadStops.Max(stop => stop.StopOrder))
                     .Any(s => s.LocationJson.Contains(destinationCity)));
             }
 
