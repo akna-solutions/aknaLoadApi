@@ -1,6 +1,7 @@
 using AknaLoad.Api.DTOs.Pricing;
 using AknaLoad.Application.Services;
 using Microsoft.AspNetCore.Mvc;
+using static AknaLoad.Application.Services.PricingService;
 
 namespace AknaLoad.Api.Controllers
 {
@@ -42,7 +43,7 @@ namespace AknaLoad.Api.Controllers
                 _logger.LogInformation("Calculating price for {Distance}km, {Weight}kg",
                     request.DistanceKm, request.Weight);
 
-                var result = await _pricingService.CalculatePriceAsync(
+                var resultObj = await _pricingService.CalculatePriceAsync(
                     request.DistanceKm,
                     request.Weight,
                     request.Volume,
@@ -51,6 +52,10 @@ namespace AknaLoad.Api.Controllers
                     request.PickupDateTime,
                     request.DeliveryDeadline,
                     request.UseAIOptimization);
+
+                // Cast the result from object to PricingResult
+                var result = resultObj as PricingResult
+                    ?? throw new InvalidOperationException("Failed to cast pricing result");
 
                 var response = new PriceCalculationResponseDto
                 {
@@ -113,7 +118,7 @@ namespace AknaLoad.Api.Controllers
                 _logger.LogInformation("Getting vehicle matches for {Weight}kg, LoadType: {LoadType}",
                     request.Weight, request.LoadType);
 
-                var matches = await _pricingService.GetVehicleMatchesAsync(
+                var matchesObj = await _pricingService.GetVehicleMatchesAsync(
                     request.Weight,
                     request.Volume,
                     request.LoadType,
@@ -123,6 +128,10 @@ namespace AknaLoad.Api.Controllers
                     request.Dimensions?.Width,
                     request.Dimensions?.Height,
                     request.UseAIRecommendation);
+
+                // Cast the result from object to List<VehicleMatch>
+                var matches = matchesObj as List<VehicleMatch>
+                    ?? throw new InvalidOperationException("Failed to cast vehicle matches result");
 
                 var response = new VehicleMatchResponseDto
                 {
