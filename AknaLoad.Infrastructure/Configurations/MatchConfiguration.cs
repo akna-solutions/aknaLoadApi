@@ -113,7 +113,7 @@ namespace AknaLoad.Domain.Configurations
                 .HasMaxLength(100);
             // Relationships
             builder.HasOne(x => x.Load)
-                .WithMany()
+                .WithMany(l => l.Matches)
                 .HasForeignKey(x => x.LoadId)
                 .OnDelete(DeleteBehavior.Restrict);
 

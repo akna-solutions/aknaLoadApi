@@ -92,10 +92,10 @@ namespace AknaLoad.Domain.Configurations
                 .IsRequired()
                 .HasMaxLength(100);
 
-       
+
             // Relationships
             builder.HasOne(x => x.Load)
-                .WithMany()
+                .WithMany(l => l.PricingCalculations)
                 .HasForeignKey(x => x.LoadId)
                 .OnDelete(DeleteBehavior.Cascade);
 
