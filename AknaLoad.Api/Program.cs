@@ -30,6 +30,8 @@ builder.Services.AddScoped<IPricingCalculationRepository, PricingCalculationRepo
 builder.Services.AddScoped<ILoadService, LoadService>();
 builder.Services.AddScoped<IMatchingService, MatchingService>();
 builder.Services.AddScoped<IPricingService, PricingService>();
+builder.Services.AddScoped<PricingService>(); // Concrete type for controller
+builder.Services.AddScoped<IGeminiAIService, GeminiAIService>(); // AI service for pricing and vehicle matching
 // builder.Services.AddScoped<ITrackingService, TrackingService>(); // Will be implemented later
 
 // External Services
