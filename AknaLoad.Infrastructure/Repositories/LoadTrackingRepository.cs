@@ -92,8 +92,6 @@ namespace AknaLoad.Infrastructure.Repositories
                 TrackingStatus.InTransit,
                 TrackingStatus.PickedUp,
                 TrackingStatus.WaitingForPickup,
-                TrackingStatus.ArrivedAtPickup,
-                TrackingStatus.ArrivedAtDelivery
             };
 
             return await _context.LoadTrackings

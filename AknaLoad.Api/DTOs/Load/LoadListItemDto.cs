@@ -19,6 +19,7 @@ namespace AknaLoad.Api.DTOs.Load
 
         // Load Properties
         public decimal Weight { get; set; }
+        public decimal Volume { get; set; }
         public LoadType LoadType { get; set; }
 
         // Route Summary
@@ -34,5 +35,11 @@ namespace AknaLoad.Api.DTOs.Load
         public DateTime? LatestDeliveryTime { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? PublishedAt { get; set; }
+
+
+        // Contact
+        public string? ContactPersonName { get; set; }
+        public string? ContactPhone { get; set; }
+        public string? ContactEmail { get; set; }
     }
 }

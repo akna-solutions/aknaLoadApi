@@ -9,11 +9,24 @@
       "AknaLoad.Business/1.0.0": {
         "dependencies": {
           "AknaLoad.Domain": "1.0.0",
+          "Google_GenerativeAI": "3.4.1",
           "Microsoft.Extensions.Configuration": "9.0.10",
           "Microsoft.Extensions.Logging": "9.0.10"
         },
         "runtime": {
           "AknaLoad.Business.dll": {}
+        }
+      },
+      "Google_GenerativeAI/3.4.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "9.0.10",
+          "System.Text.Json": "9.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/GenerativeAI.dll": {
+            "assemblyVersion": "3.4.1.0",
+            "fileVersion": "3.4.1.0"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.10": {
@@ -111,6 +124,42 @@
           }
         }
       },
+      "System.IO.Pipelines/9.0.3": {
+        "runtime": {
+          "lib/net8.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11113"
+          }
+        }
+      },
+      "System.Text.Encodings.Web/9.0.3": {
+        "runtime": {
+          "lib/net8.0/System.Text.Encodings.Web.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11113"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+            "rid": "browser",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11113"
+          }
+        }
+      },
+      "System.Text.Json/9.0.3": {
+        "dependencies": {
+          "System.IO.Pipelines": "9.0.3",
+          "System.Text.Encodings.Web": "9.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/System.Text.Json.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11113"
+          }
+        }
+      },
       "AknaLoad.Domain/1.0.0": {
         "runtime": {
           "AknaLoad.Domain.dll": {}
@@ -123,6 +172,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Google_GenerativeAI/3.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNqvXBnqzX0mk2Lz1Sl1lvmsPlSFNDjHY7pl/k1CBJefpOdjwiNArPEsoCUxAl0frJyACwc/Jsdv7Dj/xKX2uw==",
+      "path": "google_generativeai/3.4.1",
+      "hashPath": "google_generativeai.3.4.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.10": {
       "type": "package",
@@ -186,6 +242,27 @@
       "sha512": "sha512-uIpKiKp7EWlYZBK71jYP+maGYjDY9YTi/FxBlZoqDzM1ZHZB7gLqUm4jHvRFwaKfR1/Lrt2rQih9LGPIKyNEow==",
       "path": "system.diagnostics.diagnosticsource/9.0.10",
       "hashPath": "system.diagnostics.diagnosticsource.9.0.10.nupkg.sha512"
+    },
+    "System.IO.Pipelines/9.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aP1Qh9llcEmo0qN+VKvVDHFMe5Cqpfb1VjhBO7rjmxCXtLs3IfVSOiNqqLBZ/4Qbcr4J0SDdJq9S7EKAGpnwEA==",
+      "path": "system.io.pipelines/9.0.3",
+      "hashPath": "system.io.pipelines.9.0.3.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/9.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5L+iI4fBMtGwt4FHLQh40/rgdbxnw6lHaLkR3gbaHG97TohzUv+z/oP03drsTR1lKCLhOkp40cFnHYOQLtpT5A==",
+      "path": "system.text.encodings.web/9.0.3",
+      "hashPath": "system.text.encodings.web.9.0.3.nupkg.sha512"
+    },
+    "System.Text.Json/9.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r2JRkLjsYrq5Dpo7+y3Wa73OfirZPdVhxiTJWwZ+oJM7FOAe0LkM3GlH+pgkNRdd1G1kwUbmRCdmh4uoaWwu1g==",
+      "path": "system.text.json/9.0.3",
+      "hashPath": "system.text.json.9.0.3.nupkg.sha512"
     },
     "AknaLoad.Domain/1.0.0": {
       "type": "project",

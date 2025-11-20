@@ -58,6 +58,18 @@
           }
         }
       },
+      "Google_GenerativeAI/3.4.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "9.0.10",
+          "System.Text.Json": "9.0.10"
+        },
+        "runtime": {
+          "lib/net8.0/GenerativeAI.dll": {
+            "assemblyVersion": "3.4.1.0",
+            "fileVersion": "3.4.1.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -1153,6 +1165,7 @@
       "AknaLoad.Business/1.0.0": {
         "dependencies": {
           "AknaLoad.Domain": "1.0.0",
+          "Google_GenerativeAI": "3.4.1",
           "Microsoft.Extensions.Configuration": "9.0.10",
           "Microsoft.Extensions.Logging": "9.0.10"
         },
@@ -1195,6 +1208,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "Google_GenerativeAI/3.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zNqvXBnqzX0mk2Lz1Sl1lvmsPlSFNDjHY7pl/k1CBJefpOdjwiNArPEsoCUxAl0frJyACwc/Jsdv7Dj/xKX2uw==",
+      "path": "google_generativeai/3.4.1",
+      "hashPath": "google_generativeai.3.4.1.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

@@ -588,6 +588,7 @@ namespace AknaLoad.Api.Controllers
                 IsMultiStop = load.IsMultiStop,
                 TotalStops = load.TotalStops,
                 Weight = load.Weight,
+                Volume = load.Volume ?? 0,
                 LoadType = load.LoadType,
                 OriginCity = firstStop?.Location?.City,
                 DestinationCity = lastStop?.Location?.City,
@@ -596,7 +597,10 @@ namespace AknaLoad.Api.Controllers
                 EarliestPickupTime = load.EarliestPickupTime,
                 LatestDeliveryTime = load.LatestDeliveryTime,
                 CreatedAt = load.CreatedDate,
-                PublishedAt = load.PublishedAt
+                PublishedAt = load.PublishedAt,
+                ContactEmail = load.ContactEmail,
+                ContactPersonName = load.ContactPersonName,
+                ContactPhone = load.ContactPhone
             };
         }
 
